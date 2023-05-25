@@ -1,0 +1,12 @@
+<h1>Moje ziomki</h1>
+
+<ol>
+    {% for ziomek in ziomki %}
+        <li>{{ziomek.imie}}
+            <ul>
+                <li>klata: {{ ziomek.klata }}</li>
+                <li>przysiad: {{ ziomek.przysiad }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+</ol>
