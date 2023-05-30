@@ -1,0 +1,7 @@
+<form action="/nauka/add" method="post">
+    {% csrf_token %}
+    <input type="text" name="imie" id="imie" placeholder="imie">
+    <input type="number" name="klata" id="klata" placeholder="klata">
+    <input type="number" name="przysiad" id="przysiad" placeholder="przysiad">
+    <button type="submit">Dodaj</button>
+</form>
