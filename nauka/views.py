@@ -7,7 +7,8 @@ def nauka(request):
     return render(request, 'nauka/nauka.html', {'ziomki': data})
 
 def home(request):
-    return HttpResponse("Strona główna")
+    lista = ["Jak tam koksie, jest oro?" for _ in range(10)]
+    return render(request, 'nauka/home.html', {'lista':lista})
 
 def staty(request, id):
     data = Ziomki.objects.get(pk=id)
@@ -31,4 +32,5 @@ def delete(request, id):
     except:
         raise Http404('Nie ma takiego kolegi')
     ziomek.delete()
+
     return HttpResponseRedirect('/nauka')
