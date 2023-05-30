@@ -21,5 +21,6 @@ from nauka import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('nauka/', views.nauka)
+    path('nauka/', views.nauka),
+    path('nauka/<int:id>', views.staty)
 ]
